@@ -219,26 +219,20 @@ export default function home() {
         <ScrollView style={styles.scrollContainer}>
         {events.map((event, index) => (
     <TouchableOpacity key={index} onPress={() => { navigation.navigate("screens/event", {event}) }}>
-        <LinearGradient colors={['#59277f','#00000055']} style={styles.blur}>
+        <LinearGradient colors={['#854163','#251542']} style={styles.blur}>
             <Image style={styles.poa} source={{ uri: event.image }} />
             
-            <View style={{ marginLeft: 5 }}>
+            <View style={{ marginLeft: 10 }}>
                 <Text
                     style={{
-                        fontSize: 13,
-                        borderTopWidth: 1,
-                        borderTopColor: "#ffd000",
-                        borderLeftWidth: 1,
-                        borderLeftColor: "#ffd000",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "#000000",
-                        borderRightWidth: 0,
-                        width: 60,
+                        fontSize: 16,
+                      
+                     
                         padding: 3,
                         color: "white",
                         fontWeight: "400",
-                        marginTop: 13,
-                        marginLeft: 10,
+                        marginTop: 7,
+                       
                     }}
                 >
                     Nombre:
@@ -246,11 +240,11 @@ export default function home() {
 
                 <Text
                     style={{
-                        fontSize: 13,
+                        fontSize: 14,
                         color: "white",
                         fontWeight: 100,
-                        marginTop: 2,
-                        marginLeft: 10,
+                        marginTop: 0,
+                
                     }}
                 >
                     {event.name}
@@ -258,20 +252,14 @@ export default function home() {
 
                 <Text
                     style={{
-                        fontSize: 13,
-                        borderTopWidth: 1,
-                        borderTopColor: "#ffd000",
-                        borderLeftWidth: 1,
-                        borderLeftColor: "#ffd000",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "#ffd000",
-                        borderRightWidth: 0,
-                        width: 60,
+                        fontSize: 16,
+                     
+              
                         padding: 3,
                         color: "white",
                         fontWeight: "400",
-                        marginTop: 13,
-                        marginLeft: 10,
+                        marginTop: 7,
+                  
                     }}
                 >
                     Lugar:
@@ -283,7 +271,7 @@ export default function home() {
                         color: "white",
                         fontWeight: "100",
                         marginTop: 2,
-                        marginLeft: 10,
+                    
                     }}
                 >
                     {event.place}
@@ -293,20 +281,15 @@ export default function home() {
             <View style={{ marginLeft: "7%" }}>
                 <Text
                     style={{
-                        fontSize: 13,
-                        borderTopWidth: 1,
-                        borderTopColor: "#6200ff",
-                        borderLeftWidth: 1,
-                        borderLeftColor: "#ffd000",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "#ffd000",
-                        borderRightWidth: 0,
-                        width: 60,
-                        padding: 3,
+                        fontSize: 16,
+                      
+                      
+                       padding: 3,
                         color: "white",
                         fontWeight: "400",
-                        marginTop: 13,
-                        marginLeft: 10,
+                        marginTop: 7,
+           
+                        
                     }}
                 >
                     Fecha:
@@ -314,11 +297,11 @@ export default function home() {
 
                 <Text
                     style={{
-                        fontSize: 13,
+                        fontSize: 14,
                         color: "white",
                         fontWeight: 100,
-                        marginTop: 2,
-                        marginLeft: 10,
+                        marginTop: 0,
+                     
                     }}
                 >
                     20 de septiembre
@@ -326,20 +309,14 @@ export default function home() {
 
                 <Text
                     style={{
-                        fontSize: 13,
-                        borderTopWidth: 1,
-                        borderTopColor: "#ffd000",
-                        borderLeftWidth: 1,
-                        borderLeftColor: "#ffd000",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "#ffd000",
-                        borderRightWidth: 0,
-                        width: 60,
+                        fontSize: 16,
+               
+
                         padding: 3,
                         color: "white",
                         fontWeight: "400",
-                        marginTop: 13,
-                        marginLeft: 10,
+                        marginTop: 7,
+              
                     }}
                 >
                     Precio:
@@ -347,11 +324,11 @@ export default function home() {
 
                 <Text
                     style={{
-                        fontSize: 13,
+                        fontSize: 14,
                         color: "white",
                         fontWeight: 100,
-                        marginTop: 2,
-                        marginLeft: 10,
+                        marginTop: 0,
+                
                     }}
                 >
                     {`$ ${event.price}`}
@@ -372,7 +349,7 @@ const styles = StyleSheet.create({
     width:"100%"
   },
   container: {
-    backgroundColor: "#141414",
+    backgroundColor: "#181818",
     flex: 1,
     
     alignItems: 'center',
@@ -391,9 +368,9 @@ const styles = StyleSheet.create({
     height:129,
     width:129,
     marginHorizontal: 10,
-    borderRadius: 10,
-    shadowColor: "#ffffff",
-    shadowOffset: { width: 20, height: 20 },
+    borderRadius: 20,
+    shadowColor: "#6f00ff",
+    shadowOffset: { width: 15, height: 15 },
     shadowOpacity: 0.2,
     shadowRadius: 6.27,
     elevation: 20,
@@ -405,6 +382,7 @@ const styles = StyleSheet.create({
   po:{
   height:132,
   width: 129,
+  borderRadius:10,
   },
   p1:{
     color:"white",
@@ -457,13 +435,15 @@ const styles = StyleSheet.create({
   },
   middleText: {
     backgroundColor: "#5A188D",
+    borderRadius:10,
     color: "white",
     marginBottom: 0,
   },
   middle: {
     backgroundColor: "#5A188D",
-    color: "white",
+    color: "#551010",
     marginBottom: 15,
+    borderRadius:5,
   },
   img1: {
     width: 160,
@@ -552,7 +532,7 @@ alignItems:"center",
   poa:{
     width:"34%",
 height:"100%",
-borderRadius:10,
+
 marginTop:"auto",
 marginBottom:"auto"
   }
